@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TiendaRopa, proyecto de escritorio en C# y SQL Server para gestionar ventas e inventario.">
+  <title>TiendaRopa | Presentación del proyecto</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f4f6fa; color: #182538; font: 1rem/1.6 "Segoe UI", sans-serif; }
+    .wrap { width: min(68rem, calc(100% - 2.5rem)); margin: auto; }
+    header { background: #102747; color: #fff; padding: clamp(3rem, 8vw, 7rem) 0; border-bottom: .3rem solid #e7bd66; }
+    h1, h2, h3 { line-height: 1.15; }
+    h1 { font-size: clamp(3rem, 9vw, 6rem); letter-spacing: -.045em; margin: 0; }
+    h2 { font-size: clamp(1.7rem, 4vw, 2.35rem); margin: 0 0 1.25rem; }
+    h3 { margin: 0 0 .55rem; }
+    p { margin: 0; }
+    .intro { max-width: 41rem; color: #e4ecf7; font-size: 1.2rem; margin: 1rem 0 1.7rem; }
+    .button { display: inline-block; padding: .65rem 1rem; border-radius: .45rem; background: #e7bd66; color: #102747; font-weight: 700; text-decoration: none; }
+    .button:hover { background: #ffe0a0; }
+    a:focus-visible { outline: .2rem solid #588be0; outline-offset: .25rem; }
+    section { padding: 2.7rem 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1rem; }
+    article { background: #fff; border: 1px solid #dbe2ed; border-radius: .75rem; padding: 1.35rem; }
+    .example { border-top: 1px solid #dbe2ed; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; background: #fff; }
+    th, td { padding: .65rem; text-align: left; border-bottom: 1px solid #dbe2ed; }
+    th:last-child, td:last-child { text-align: right; }
+    footer { border-top: 1px solid #dbe2ed; padding: 1.5rem 0; color: #40526b; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>TiendaRopa</h1>
+      <p class="intro">Sistema de escritorio para registrar ventas, administrar clientes y productos, y consultar el inventario de una tienda de ropa. Desarrollado con C# Windows Forms y SQL Server.</p>
+      <a class="button" href="https://www.figma.com/proto/w82q15Vo25IhIMlF5OtwOy/TiendaRopa-Prototipo?node-id=1-5&amp;p=f&amp;viewport=196%2C750%2C1.79&amp;t=4LgnQ8NsRwDPiTtc-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=1%3A5&amp;page-id=0%3A1">Ver prototipo en Figma</a>
+      <a class="button" href="https://github.com/hj13rc-arch/TiendaRopa">Ver código en GitHub</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <section aria-labelledby="modulos">
+      <h2 id="modulos">Módulos del sistema</h2>
+      <div class="grid">
+        <article><h3>Seguridad</h3><p>Inicio de sesión con roles de administrador y cajero.</p></article>
+        <article><h3>Productos</h3><p>Gestión del catálogo por código, talla y color, con precios y existencias.</p></article>
+        <article><h3>Clientes</h3><p>Registro, edición y búsqueda por nombre o teléfono.</p></article>
+        <article><h3>Ventas</h3><p>Registro de varias prendas en una venta y actualización de existencias al confirmarla.</p></article>
+        <article><h3>Reportes</h3><p>Consulta del historial de ventas, comprobantes e inventario.</p></article>
+      </div>
+    </section>
+    <section class="example" aria-labelledby="venta">
+      <h2 id="venta">Venta de prueba</h2>
+      <p>La venta 1 registró tres prendas y actualizó sus existencias en el inventario.</p>
+      <table aria-label="Detalle de la venta 1">
+        <thead><tr><th scope="col">Producto</th><th scope="col">Cantidad</th><th scope="col">Subtotal</th></tr></thead>
+        <tbody>
+          <tr><td>Camiseta negra, talla M</td><td>2</td><td>C$ 500,00</td></tr>
+          <tr><td>Pantalón azul, talla 32</td><td>1</td><td>C$ 600,00</td></tr>
+        </tbody>
+        <tfoot><tr><th scope="row">Total</th><td>3</td><td><strong>C$ 1.100,00</strong></td></tr></tfoot>
+      </table>
+    </section>
+  </main>
+  <footer><div class="wrap">Elaborado por Henry de Jesús Roa Carrión</div></footer>
+</body>
+</html>
